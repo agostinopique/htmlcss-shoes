@@ -61,7 +61,7 @@ li a {
   font-size: 1.5rem;
 }
 
-a:active {
+li a:active {
   color: #992121;
   background-color: #aa9292;
   box-shadow: 3px 3px #000000;
@@ -70,23 +70,23 @@ a:active {
 /* /NAV-BAR */
 
 
-span {
+.shoe span {
   display: block;
   text-align: center;
 }
 
 
-#low {
+section#low {
   background-color: red;
   color: yellow;
 }
 
-#sneaker {
+section#sneaker {
   background-color: green;
   color: yellow;
 }
 
-#high-top {
+section#high-top {
   background-color: yellow;
   color: green;
 }
@@ -94,7 +94,7 @@ span {
 
 /* CENTRATURA IMMAGINI  */
 
-.shoe {
+.box .shoe {
   position: absolute;
   top: 50%;
   left: 50%;
