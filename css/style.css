@@ -56,7 +56,7 @@ li a {
   background-color: white;
   padding: 10px 15px;
   border-radius: 50%;
-  text-shadow: 4px 4px 2px #625959;
+  box-shadow: 4px 4px 2px #625959;
   color: rgb(118, 128, 131);
   font-size: 1.5rem;
 }
@@ -64,7 +64,7 @@ li a {
 a:active {
   color: #992121;
   background-color: #aa9292;
-  text-shadow: 5px 5px #000000;
+  box-shadow: 3px 3px #000000;
 }
 
 /* /NAV-BAR */
