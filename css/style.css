@@ -3,3 +3,71 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: 'Bungee', cursive;
+  font-size: 40px;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.box {
+  width: 100%;
+  height: 100vh;
+  margin: 0px auto;
+  position: relative;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.header {
+  height: 80px;
+  width: 100%;
+}
+
+li a {
+  text-decoration: none;
+}
+
+ul li {
+  float: right;
+  padding: 10px;
+  list-style: none;
+}
+
+span {
+  display: block;
+  text-align: center;
+}
+
+
+#low {
+  background-color: red;
+  color: yellow;
+}
+
+#sneaker {
+  background-color: green;
+  color: yellow;
+}
+
+#high-top {
+  background-color: yellow;
+  color: green;
+}
+
+
+/* CENTRATURA IMMAGINI  */
+
+.shoe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* /CENTRATURA IMMAGINI  */
