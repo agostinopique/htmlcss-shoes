@@ -4,9 +4,11 @@
   box-sizing: border-box;
 }
 
+/* CORREZZIONE: Il font si puó indicare anche in vw in modo che abbia un font che si aggiusta alla viewport. */
+
 body {
   font-family: 'Bungee', cursive;
-  font-size: 40px;
+  font-size: 40px; 
   font-weight: bolder;
   text-transform: uppercase;
 }
@@ -21,6 +23,10 @@ html {
   margin: 0px auto;
   position: relative;
 }
+
+/* correzzione: Dando all'img una width del 100% possiamo fare in modo che l'immagine si rimpicciolisca insieme alla viewport anche se il blocco che contiene l'immagine non ha dimensioni esplicite. Per questo motivo é difficile da controllare. */
+
+/* CORREZZIONE: In questo caso il clearfix non é necessario perché non abbiamo bisogno che il contenitore del nav veda il contenuto perché é comunque posizionato da un'altra parte. */
 
 .clearfix::after {
   content: "";
@@ -44,12 +50,16 @@ nav {
   margin-top: 15px;
 }
 
+/* CORREZZIONE: Per "sdraiare"gli <a> potevamo utilizzare anche float right in modo che si dispongano in fila. */
 
 ul li {
   display: inline-block;
-  padding: 10px;
+  /* float: right;  ALTERNATIVA*/
+  padding: 15px;
   list-style: none;
 }
+
+/* CORREZZIONE: Per dare il background quadrato da poi stondare, bisognava dare display block ad <a> in modo che prenda le dimensioni. Il padding tiene conto delle dimensioni e della forma del carattere a cui lo stiamo dando e per questo non verrá un pulsante tondo con border radius. */
 
 li a {
   text-decoration: none;
@@ -59,12 +69,19 @@ li a {
   box-shadow: 4px 4px 2px #625959;
   color: rgb(118, 128, 131);
   font-size: 1.5rem;
+  display: block; /* NECESSARIO PER LO SPOSTAMENTO IN :ACTIVE */
+  /* width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px; ALTERNATIVA */ */
 }
 
 li a:active {
   color: #992121;
   background-color: #aa9292;
   box-shadow: 3px 3px #000000;
+  transform: translate(0, 10px); /* SE CON DISPLAY: INLINE-BLOCK; */
+  /* margin-top: 5px; ALTERNATIVA IN CASO DI FLOAT per lo spostamento in basso quando cliccato */
 }
 
 /* /NAV-BAR */
